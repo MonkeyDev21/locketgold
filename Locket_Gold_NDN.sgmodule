@@ -1,0 +1,16 @@
+#!url=https://raw.githubusercontent.com/nguyendinhnghi/coderndn/main/Locket_Gold_NDN.sgmodule
+#!name=Locket-NDN_Gold
+#!desc=Crack By NguyenDinhNghi
+
+[General]
+user-agent = Locket/1.0.0 (iPhone; iOS 18.1.1; Scale/3.00)
+
+[Script]
+# ~ By NguyenDinhNghi
+# ~ Enhanced for Shadowrocket, Surge, & LanceX
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.*\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/MonkeyDev21/locketgold/refs/heads/main/Locket_ndn_fix.js, requires-body=true, max-size=-1, timeout=120
+
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.*\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/MonkeyDev21/locketgold/refs/heads/main/deleteHeader.js, timeout=120
+
+[MITM]
+hostname = api.revenuecat.com, raw.githubusercontent.com
